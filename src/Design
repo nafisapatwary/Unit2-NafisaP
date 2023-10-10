@@ -1,0 +1,64 @@
+LinearEquation Class:
+
+Instance Variables:
+    private int x1 - This variable represents the x coordinate of the first pair
+    private int y1 - This variable represents the y coordinate of the first pair
+    private int x2 - This variable represents the x coordinate of the second pair
+    private int y2 - This variable represents the y coordinate of the second pair
+
+Methods:
+    public LinearEquation(int x1, int y1, int x2, int y2)
+        This method is the constructor that will take the user input as it's argument and create a Linear equation
+        object and also give the instance variables values
+
+    public String slopeAsFraction()
+        This method will return the slope as a 'fraction' by calculating y2-y1 and assigning it to slopeNum, then it
+        will calculate x2-x1 and assign it to slopeDen, then it will return a string using those variables to add the
+        "/" to make it a 'fraction'
+
+    public double slopeAsDecimal()
+        This method will calculate the slope between the 2 points by dividing the difference of y2 and y1 by the
+        difference of x2 and x1. It will return the slope as a double (needed for later calculations)
+
+    public double yIntercept()
+        This method will calculate the y intercept of the equation
+
+    public double distance()
+        This method will calculate and return the distance between the 2 points as a double
+        Math.sqrt(((Math.POW((x2-x1), 2) + ((Math.POW(y2-y1), 2)))
+
+    public String createLinearEquation()
+        This method will return a string with the slope and the y intercept in y = mx + b form
+
+    public String distance()
+        This method will return a string with the distance between the points
+
+    public String solveForPoint(double x3)
+            This method will use the x3 value that the user inputs and solve for the y coordinate associated using the slope
+            and y intercept
+            Then it will return a string with the x and y values in the coordinate point format
+
+    public String toString()
+        This method will return a string that will be used to display the following information
+           - First pair of coords
+           - Second pair of coords
+           - Slope as a decimal
+           - Y intercept
+           - Equation of line in y = mx + b form
+           - Distance between points
+
+
+
+
+EquationRunner Class:
+1. Ask user to enter first coordinate point
+2. Ask user to enter second coordinate point
+3. Use string methods (indexOf and substrings) to create new strings that are just the x and y values
+4. Parse through strings to get values as doubles
+5. Create LinearEquation object with constructor
+6. Call calculateSlope method and assign it to a slope variable
+7. Call calculateYIntercept method and assign it to a double y intercept variable
+8. Call calculateDistance method and assign it to a double distance variable
+9. Call toString method to print information
+10. Ask user for another x value (x3)
+11. Call solveForPoint method to print new coordinate point
